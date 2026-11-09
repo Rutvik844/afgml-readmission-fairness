@@ -19,5 +19,5 @@
   ],
   "exploratory": "everything else (grid over mechanisms/rates, ablations, robustness, sub-group analyses)",
   "tuning_budget": "4 candidates per model family on VALIDATION AP under natural missingness, then frozen (LR: C; HGB: depth x lr; BN: smoothing strength)",
-  "uncertainty": "patient-level cluster bootstrap, B=100, paired across methods; seeds=[0, 1] measure algorithmic/masking variability only"
+  "uncertainty": "patient-level cluster bootstrap, B=1000, paired across methods; seeds=[0, 1, 2, 3, 4] measure algorithmic/masking variability only"
 }

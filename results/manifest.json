@@ -10,6 +10,7 @@
   "figures/fig_e4_shift_worst_group_recall.png",
   "figures/fig_e5_capacity_tradeoffs.png",
   "figures/fig_graph_dags.png",
+  "manifest.json",
   "requirements.txt",
   "tables/ablations.csv",
   "tables/confirmatory_primary_test_holm.csv",
