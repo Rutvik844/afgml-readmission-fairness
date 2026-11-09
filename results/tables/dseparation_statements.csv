@@ -1,0 +1,8 @@
+statement,BN-marg d-separated,BN-obs d-separated
+race ⟂ Y | {},True,True
+race ⟂ Y | {RA},False,False
+"race ⟂ Y | {RA, gender, age, C, H}",True,False
+RA ⟂ Y | {},False,False
+"RA ⟂ Y | {race, gender, age, C, H}",True,False
+"XA ⟂ RA | {age, C, H}",True,False
+"gender ⟂ Y | {RA, RN, race, age, C, H}",True,False

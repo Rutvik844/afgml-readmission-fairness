@@ -1,0 +1,8 @@
+numpy==2.4.6
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.16.3
+pgmpy==1.1.2
+fairlearn==0.15.0
+networkx==3.7
+matplotlib

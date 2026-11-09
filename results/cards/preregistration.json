@@ -1,0 +1,23 @@
+{
+  "primary_predictive_metric": "Average precision (AP) on the frozen test split; recall@capacity as the decision-level utility",
+  "primary_fairness_criterion": "Equality of opportunity: DeltaEOpp across race x gender intersections with >=30 positives; worst-group recall as companion",
+  "secondary_criteria": [
+    "DeltaEOdds",
+    "DeltaDP + Rsel (diagnostic)",
+    "group calibration (diagnostic)",
+    "gaps within missingness patterns"
+  ],
+  "decision": "D=1 prioritises the patient for a SIMULATED follow-up service; capacity 20% (primary), 10%/30% (robustness). Selection = top-k of the evaluated batch (fixed capacity).",
+  "acceptable_utility_loss": "<=0.01 absolute loss in recall@20% vs. the LR+indicator reference at matched capacity",
+  "protected attributes at prediction time": "NOT used by any scoring model; the group-aware EO threshold baseline is the only method that uses race x gender at decision time (flagged in all tables)",
+  "primary_research_question": "Does explicit availability modelling (BN with observation nodes + marginalisation) reduce the deterioration of worst-group recall when missingness shifts?",
+  "primary_shift": "train+validation under MAR@30% -> test under (a) same MAR@30% (no shift) and (b) MNAR@30% (shift) ; deterioration = wgr(no shift) - wgr(shift)",
+  "confirmatory_family (Holm, m=3)": [
+    "BN-marg vs LR-imp",
+    "BN-marg vs LR-ind",
+    "BN-marg vs BN-base"
+  ],
+  "exploratory": "everything else (grid over mechanisms/rates, ablations, robustness, sub-group analyses)",
+  "tuning_budget": "4 candidates per model family on VALIDATION AP under natural missingness, then frozen (LR: C; HGB: depth x lr; BN: smoothing strength)",
+  "uncertainty": "patient-level cluster bootstrap, B=100, paired across methods; seeds=[0, 1] measure algorithmic/masking variability only"
+}

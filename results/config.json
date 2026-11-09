@@ -1,0 +1,29 @@
+{
+  "QUICK": true,
+  "SEEDS": [
+    0,
+    1
+  ],
+  "N_BOOT": 100,
+  "RATES": [
+    0.3
+  ],
+  "CAPS": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "CAP": 0.2,
+  "MIN_N": 30,
+  "SPLIT_SEED": 42,
+  "PAT_BUDGET": 100,
+  "EM_ITERS": 12,
+  "python": "3.13.16",
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "scipy": "1.16.3",
+  "pgmpy": "1.1.2",
+  "fairlearn": "0.15.0",
+  "networkx": "3.7"
+}
