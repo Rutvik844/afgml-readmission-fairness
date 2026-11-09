@@ -1,0 +1,16 @@
+# Mirrors the CONFIG block in notebooks/AFGML.ipynb (cell 1). The notebook is the source of truth;
+# this file freezes the values so reviewers can see them without opening the notebook.
+quick: false
+seeds: [0, 1, 2, 3, 4]
+n_boot: 1000
+mask_rates: [0.10, 0.30, 0.50]
+capacities: [0.10, 0.20, 0.30]
+primary_capacity: 0.20
+min_group_n: 30
+split_seed: 42
+pat_budget: 300
+em_iters: 12
+primary_utility: recall@20%
+acceptable_utility_loss: 0.01   # vs LR-ind
+primary_fairness: delta_EOpp over race x gender cells with >=30 test positives
+confirmatory_family: 3 comparisons, Holm correction

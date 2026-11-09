@@ -1,0 +1,15 @@
+# After your final Colab run, replace with exact pins: copy the requirements.txt the
+# notebook writes to p2_outputs/requirements.txt (the versions you actually used).
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+networkx
+pgmpy
+fairlearn
+# only needed for headless runs / tests outside Colab
+nbformat
+nbconvert
+ipykernel
+pytest

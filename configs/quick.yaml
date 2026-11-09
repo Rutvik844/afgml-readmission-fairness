@@ -1,0 +1,6 @@
+# Smoke test only (env P2_QUICK=1). Cannot support any headline claim.
+quick: true
+seeds: [0, 1]
+n_boot: 100
+mask_rates: [0.30]
+pat_budget: 100

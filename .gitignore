@@ -1,0 +1,25 @@
+# data (never commit raw clinical records)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+diabetic_data.csv
+IDS_mapping.csv
+# environments / caches
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+*.pyc
+# secrets
+.env
+*.key
+# LaTeX build junk
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+.DS_Store
